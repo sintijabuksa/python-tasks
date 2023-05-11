@@ -1,0 +1,45 @@
+
+def add(num1, num2):
+    return num1 + num2
+
+def subtr(num1, num2):
+    return num1 - num2
+
+def mult(num1, num2):
+    return num1 * num2
+
+def div(num1, num2):
+    return num1 / num2
+
+print("Choose one of the calculation methods below you would like to perform: ")
+print("for ADDITION select 1.")
+print("for SUBTRACTION select 2.")
+print("for MULTIPLICATION select 3.")
+print("for DIVISION select 4.")
+
+while True:
+    operation = input("Your choosen calculation method is: ")
+    if operation in ("1", "2", "3", "4"):
+        try:
+            num1 = int(input("Enter first number: "))
+            num2 = int(input("Enter second number: "))
+        except ValueError:
+            continue
+
+        if operation == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif operation == "2":
+            print(num1, "-", num2, "=", subtr(num1, num2))
+        elif operation == "3":
+            print(num1, "*", num2, "=", mult(num1, num2))
+        elif operation == "4":
+            print(num1, "/", num2, "=", div(num1, num2))
+
+        print("Would you like to perform some more calculations?")
+        repeat = input("enter (yes) to continue and (no) to stop: ")
+        if repeat == "yes":
+            continue
+        else:
+            break
+    else:
+        print("Your choosen calculation method does not exist! Choose again.")
