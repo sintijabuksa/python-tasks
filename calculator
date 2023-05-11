@@ -24,6 +24,7 @@ while True:
             num1 = int(input("Enter first number: "))
             num2 = int(input("Enter second number: "))
         except ValueError:
+            print("Invalid type of entered data, only numbers allowed.")
             continue
 
         if operation == '1':
