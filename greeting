@@ -1,0 +1,22 @@
+
+class Greeting():
+    def __init__(self, language): 
+        self.language = language  
+    
+    def greeting(self): 
+        if self.language == "latvian":
+            return "Sveika pasaule!"
+        elif self.language == "international":
+            return "Hello!"
+        else:
+            return "Hello world!"
+
+
+latvian = Greeting("latvian")
+print("In Latvia we say: " + latvian.greeting())
+
+international = Greeting("international")
+print("Internationally we greet each other saying: " + international.greeting())
+
+python = Greeting("python")
+print("Only anyone learning a new programming language use: " + python.greeting())
